@@ -1,0 +1,8 @@
+# Set to wordpress coding standards
+# https://make.wordpress.org/core/handbook/coding-standards
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+indent_style = tab
+tab_size = 4
