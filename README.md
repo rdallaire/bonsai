@@ -32,5 +32,3 @@ bower install
 
 * `gulp` - will build the project once
 * `gulp watch` - will watch for file changes, build the assets, run livereload
-
-

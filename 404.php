@@ -1,43 +1,43 @@
 <?php get_header(); ?>
 
-			<div id="content">
+<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+	<div id="inner-content" class="wrap cf">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+		<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-						<article id="post-not-found" class="hentry cf">
+			<article id="post-not-found" class="hentry cf">
 
-							<header class="article-header">
+				<header class="article-header">
 
-								<h1><?php _e( 'Epic 404 - Article Not Found', 'bonestheme' ); ?></h1>
+					<h1><?php _e( 'Epic 404 - Article Not Found', 'bonsaitheme' ); ?></h1>
 
-							</header>
+				</header>
 
-							<section class="entry-content">
+				<section class="entry-content">
 
-								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'bonestheme' ); ?></p>
+					<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'bonsaitheme' ); ?></p>
 
-							</section>
+				</section>
 
-							<section class="search">
+				<section class="search">
 
-									<p><?php get_search_form(); ?></p>
+						<p><?php get_search_form(); ?></p>
 
-							</section>
+				</section>
 
-							<footer class="article-footer">
+				<footer class="article-footer">
 
-									<p><?php _e( 'This is the 404.php template.', 'bonestheme' ); ?></p>
+						<p><?php _e( 'This is the 404.php template.', 'bonsaitheme' ); ?></p>
 
-							</footer>
+				</footer>
 
-						</article>
+			</article>
 
-					</main>
+		</main>
 
-				</div>
+	</div>
 
-			</div>
+</div>
 
 <?php get_footer(); ?>

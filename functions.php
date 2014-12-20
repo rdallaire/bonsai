@@ -1,11 +1,32 @@
 <?php
 
+//			___  ____ _  _ ____ ____ _
+//			|__] |  | |\ | [__  |__| |
+//			|__] |__| | \| ___] |  | |
+//
+//			by Ross Dallaire @rdallaire
+//
+//		         ,.,
+//		        MMMM_    ,..,
+//		          "_ "__"MMMMM          ,...,,
+//		   ,..., __." --"    ,.,     _-"MMMMMMM
+//		  MMMMMM"___ "_._   MMM"_."" _ """"""
+//		   """""    "" , \_.   "_. ."
+//		          ,., _"__ \__./ ."
+//		         MMMMM_"  "_    ./
+//		          ''''      (    )
+//		   ._______________.-'____"---._.
+//		    \                          /
+//		     \________________________/
+//		     (_)                    (_)
+
 	// files to load into functions.php
 	$bonsai_includes = array(
 
 		'lib/init.php',				// initial theme setup
 		'lib/assets.php',			// scripts and styles
-		'lib/admin.php' 			// admin functions
+		'lib/admin.php', 			// admin functions
+		'lib/sidebars.php' 			// admin functions
 
 	);
 
