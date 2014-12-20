@@ -1,0 +1,28 @@
+// fonts
+$font-main: 'Open Sans', 'Helvetica', Arial, sans-serif;
+$font-secondary: $font-main;
+$font-headings: $main-font;
+
+// font sizes
+$font-size-main: 1rem;
+$font-size-h1: $font-size-main * 2.25;
+$font-size-h2: $font-size-main * 2;
+$font-size-h3: $font-size-main * 1.75;
+$font-size-h4: $font-size-main * 1.5;
+$font-size-h5: $font-size-main * 1.25;
+$font-size-h6: $font-size-main;
+
+// line heights
+$line-height-main: $font-size-main * 1.5;
+$line-height-headings: $font-size-main * 1.5;
+
+// other
+$border-radius-main: 3px;
+$z-index-main: 0;
+
+// colors
+$color-main: #000;
+$color-secondary: #000;
+$color-text: #000;
+$color-headings: #000;
+$color-bg: #fff;
