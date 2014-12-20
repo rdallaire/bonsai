@@ -1,26 +1,42 @@
 <?php get_header(); ?>
 
-
-<main class="" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+<main class="post" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<?php
-			/*
-			 * Ah, post formats. Nature's greatest mystery (aside from the sloth).
-			 *
-			 * So this function will bring in the needed template file depending on what the post
-			 * format is. The different post formats are located in the post-formats folder.
-			 *
-			 *
-			 * REMEMBER TO ALWAYS HAVE A DEFAULT ONE NAMED "format.php" FOR POSTS THAT AREN'T
-			 * A SPECIFIC POST FORMAT.
-			 *
-			 * If you want to remove post formats, just delete the post-formats folder and
-			 * replace the function below with the contents of the "format.php" file.
-			*/
-			get_template_part( 'templates/post-formats/format', get_post_format() );
-		?>
+		<article id="post-<?php the_ID(); ?>" class="article-single" role="article">
+
+			<header class="article-header">
+
+				<h1 class="article-title"><?php the_title(); ?></h1>
+
+				<p class="article-meta">
+
+					<span class="author">Posted by <?php the_author_link(); ?></span>
+					<time datetime="<?php the_date(); ?>"><?php the_date( 'Y-m-d' ) ?></time>
+					<span class="categories">Categories: <?php the_category( ', ' ); ?></span>
+
+				</p>
+
+			</header>
+
+			<section class="article-content">
+
+				<?php the_content(); ?>
+
+			</section>
+
+			<footer class="article-footer">
+
+			</footer>
+
+			<?php
+				// If comments are open or we have at least one comment, load up the default comment template provided by Wordpress
+				if ( comments_open() || '0' != get_comments_number() )
+					comments_template( '', true );
+			?>
+
+		</article>
 
 	<?php endwhile; ?>
 

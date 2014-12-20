@@ -32,3 +32,23 @@ bower install
 
 * `gulp` - will build the project once
 * `gulp watch` - will watch for file changes, build the assets, run livereload
+
+
+## File Structure
+Brief overview of the folders used in Bonsai
+
+```
+assets/             - production assets are built with Gulp
+                      from assets-dev and placed here
+    scripts/        - compiled, minified, concatenated JS
+    styles/         - compiled, minified, concatenated CSS
+    images/         - optimized images & sprites
+
+assets-dev/         - SASS, JS, and raw images
+    scripts/        - all javascript
+    styles/         - all SASS, CSS and other styles
+    images/         - raw images and sprites
+
+lib/                - all of the php functions for the theme
+templates/          - more php snipptets & templates
+```

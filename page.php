@@ -1,71 +1,41 @@
 <?php get_header(); ?>
 
-<div id="content">
+<main class="post" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-	<div id="inner-content" class="wrap cf">
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+		<article id="post-<?php the_ID(); ?>" class="page-single" role="article">
 
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<header class="article-header">
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+				<h1 class="article-title"><?php the_title(); ?></h1>
 
-					<header class="article-header">
+			</header>
 
-						<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+			<section class="article-content">
 
-						<p class="byline vcard">
-							<?php printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'bonsaitheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-						</p>
+				<?php the_content(); ?>
 
-					</header> <?php // end article header ?>
+			</section>
 
-					<section class="entry-content cf" itemprop="articleBody">
-						<?php
-							// the content (pretty self explanatory huh)
-							the_content();
+			<?php
+				// If comments are open or we have at least one comment, load up the default comment template provided by Wordpress
+				// if ( comments_open() || '0' != get_comments_number() )
+					// comments_template( '', true );
+			?>
 
-							/*
-							 * Link Pages is used in case you have posts that are set to break into
-							 * multiple pages. You can remove this if you don't plan on doing that.
-							 *
-							 * Also, breaking content up into multiple pages is a horrible experience,
-							 * so don't do it. While there are SOME edge cases where this is useful, it's
-							 * mostly used for people to get more ad views. It's up to you but if you want
-							 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-							 *
-							 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-							 *
-							*/
-							wp_link_pages( array(
-								'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonsaitheme' ) . '</span>',
-								'after'       => '</div>',
-								'link_before' => '<span>',
-								'link_after'  => '</span>',
-							) );
-						?>
-					</section> <?php // end article section ?>
+		</article>
 
-					<footer class="article-footer cf">
+	<?php endwhile; ?>
 
-					</footer>
+	<?php else : ?>
 
-					<?php comments_template(); ?>
+		<?php get_template_part( 'templates/posts-not-found' ); ?>
 
-				</article>
+	<?php endif; ?>
 
-				<?php endwhile; else : ?>
+</main>
 
-					<?php get_template_part( 'templates/posts-not-found' ); ?>
-
-				<?php endif; ?>
-
-			</main>
-
-			<?php get_sidebar(); ?>
-
-	</div>
-
-</div>
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
