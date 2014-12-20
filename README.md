@@ -1,8 +1,7 @@
 Bonsai
 ======
-_Still a WIP_
 
-WordPress starter theme using Gulp and Foundation.
+WordPress starter theme using Gulp, Foundation & SASS.
 
 ## Goals
 
@@ -38,8 +37,7 @@ bower install
 Brief overview of the folders used in Bonsai
 
 ```
-assets/             - production assets are built with Gulp
-                      from assets-dev and placed here
+assets/             - assets are built with Gulp from assets-dev and placed here
     scripts/        - compiled, minified, concatenated JS
     styles/         - compiled, minified, concatenated CSS
     images/         - optimized images & sprites
