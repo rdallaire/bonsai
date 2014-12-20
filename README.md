@@ -7,14 +7,13 @@ WordPress starter theme using Gulp, Foundation & SASS.
 
 * Quickly develop WordPress themes that can be used by anyone.
 * Develop custom WordPress sites for invidual use.
-* Make theme pass theme check and use WordPress coding standards.
 
 ## Features
 
 * [Gulp](http://gulpjs.com/) for compiling SASS to CSS, live reloading, concatenating and minifying files
 * [Bower](http://bower.io/) for front-end package management
 * [Foundation 5](http://foundation.zurb.com/)
-* Organized file and template structure
+* Uses [WordPress Coding Standards](https://make.wordpress.org/core/handbook/coding-standards/)
 * ARIA roles and microformats
 * [WooCommerce ready (coming soon)](http://www.woothemes.com/woocommerce/)
 * [bbPress ready (coming soon)](http://www.bbpress.com)
