@@ -1,64 +1,52 @@
 <?php get_header(); ?>
 
-<div id="content">
+<main id="main" role="main">
 
-	<div id="inner-content" class="wrap cf">
+	<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonsaitheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
 
-		<main id="main" class="m-all t-2of3 d-5of7 cf" role="main">
-			<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonsaitheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
+			<header class="article-header">
 
-					<header class="entry-header article-header">
+				<h1 class="article-title"><?php the_title(); ?></h1>
 
-						<h3 class="search-title entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+				<p class="article-meta">
 
-      						<p class="byline entry-meta vcard">
-        							<?php printf( __( 'Posted %1$s by %2$s', 'bonsaitheme' ),
-       							    /* the time the post was published */
-       							    '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-          							    /* the author of the post */
-           							    '<span class="by">by</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-        							); ?>
-      						</p>
+					<span class="author">Posted by <?php the_author_link(); ?></span>
+					<time datetime="<?php the_date(); ?>"><?php the_date( 'Y-m-d' ) ?></time>
+					<span class="categories">Categories: <?php the_category( ', ' ); ?></span>
 
-					</header>
+				</p>
 
-					<section class="entry-content">
-							<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'bonsaitheme' ) . '</span>' ); ?>
+			</header>
 
-					</section>
+			<section class="entry-content">
 
-					<footer class="article-footer">
+				<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'bonsaitheme' ) . '</span>' ); ?>
 
-						<?php if(get_the_category_list(', ') != ''): ?>
-      					<?php printf( __( 'Filed under: %1$s', 'bonsaitheme' ), get_the_category_list(', ') ); ?>
-      					<?php endif; ?>
+			</section>
 
-     					<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonsaitheme' ) . '</span> ', ', ', '</p>' ); ?>
+			<footer class="article-footer">
 
-					</footer> <!-- end article footer -->
+			</footer>
 
-				</article>
+		</article>
 
-			<?php endwhile; ?>
+	<?php endwhile; ?>
 
-					<?php bones_page_navi(); ?>
+		<?php bonsai_page_navi(); ?>
 
-				<?php else : ?>
+	<?php else : ?>
 
-					<?php get_template_part( 'templates/posts-not-found' ); ?>
+		<?php get_template_part( 'templates/posts-not-found' ); ?>
 
-				<?php endif; ?>
+	<?php endif; ?>
 
-			</main>
+	</main>
 
-				<?php get_sidebar(); ?>
+	<?php get_sidebar(); ?>
 
-		</div>
-
-</div>
 
 <?php get_footer(); ?>

@@ -4,7 +4,7 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<article id="post-<?php the_ID(); ?>" class="article-single" role="article">
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 
 			<header class="article-header">
 
@@ -39,6 +39,8 @@
 		</article>
 
 	<?php endwhile; ?>
+
+		<?php bonsai_page_navi(); ?>
 
 	<?php else : ?>
 

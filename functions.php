@@ -27,10 +27,11 @@
 	$bonsai_includes = array(
 
 		'lib/init.php',				// initial theme setup
-		'lib/cleanup.php',				// initial theme setup
+		'lib/cleanup.php',			// initial theme setup
 		'lib/assets.php',			// scripts and styles
 		'lib/admin.php', 			// admin functions
-		'lib/sidebars.php' 			// admin functions
+		'lib/sidebars.php', 		// admin functions
+		'lib/extras.php' 			// extra functions
 
 	);
 

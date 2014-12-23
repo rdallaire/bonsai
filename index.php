@@ -56,7 +56,7 @@
 
 	<?php endwhile; ?>
 
-			<?php //bones_page_navi(); ?>
+		<?php bonsai_page_navi(); ?>
 
 	<?php else : ?>
 

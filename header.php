@@ -16,6 +16,7 @@
 
 		<?php
 
+		// grab main menu
 		$defaults = array(
 			'theme_location'  => '',
 			'menu'            => '',

@@ -41,11 +41,12 @@ function bonsai_init() {
 	// http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
 	add_theme_support( 'html5', array( 'caption', 'comment-form', 'comment-list' ));
 
+	// woocommerce support
+	add_theme_support( 'woocommerce' );
+
 }
 
 // run bonsai init
 add_action( 'after_setup_theme', 'bonsai_init' );
-
-
 
  ?>
