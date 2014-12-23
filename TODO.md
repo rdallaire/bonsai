@@ -1,6 +1,9 @@
 # Todo
 
+<<<<<<< HEAD
 * [ ] cleanup all html markup
+=======
+>>>>>>> 87dd7177817fc9177b080320ca3df33abde6a979
 * [ ] Configure gulpfile
 * [ ] add favicons codes
 * [ ] add woocommerce templates
