@@ -27,6 +27,6 @@
     "gulp-flatten": "0.0.4"
   },
   "scripts": {
-    "postinstall" : "node_modules/.bin/bower install"
+    "postinstall": "node_modules/.bin/bower install"
   }
 }
