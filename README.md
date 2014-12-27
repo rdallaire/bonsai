@@ -22,8 +22,9 @@ WordPress starter theme using Gulp, Foundation & SASS.
 
 ```bash
 npm install
-bower install
 ```
+
+This will install all node modules and bower components.
 
 
 ## Gulp Commands
