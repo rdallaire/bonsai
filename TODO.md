@@ -12,3 +12,4 @@
 * [ ] cleanup post types
 * [ ] add comments.php
 * [ ] setup wp_enque and cleanup scripts
+* [ ] add bowerrc
