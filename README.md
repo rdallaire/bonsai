@@ -1,5 +1,6 @@
 Bonsai
 ======
+_(Work in Progress)_
 
 WordPress starter theme using Gulp, Foundation & SASS.
 
@@ -20,33 +21,61 @@ WordPress starter theme using Gulp, Foundation & SASS.
 
 ## Installation
 
+Install gulp and bower globally if not already installed.
+```bash
+npm install gulp -g
+npm install bower -g
+```
+
 ```bash
 npm install
 ```
+
+Install [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) for Chrome
 
 This will install all node modules and bower components.
 
 
 ## Gulp Commands
 
-* `gulp` - will build the project once
-* `gulp watch` - will watch for file changes, build the assets, run livereload
+* `gulp` - build the project once
+* `gulp watch` - watch for file changes, build the assets, run livereload
+* `gulp dist` - compile all/ move all files ready for production
 
 
 ## File Structure
-Brief overview of the folders used in Bonsai
+Brief overview of the folders used in Bonsai. Gulp is used to generate the `build` and `dist` folders where the compiled & optimized files live.
 
 ```
-assets/             - assets are built with Gulp from assets-dev and placed here
-    scripts/        - compiled, minified, concatenated JS
-    styles/         - compiled, minified, concatenated CSS
-    images/         - optimized images & sprites
+src/                - where all the raw files are edited/ placed
+    assets/
+        images/     - raw image files
+        scripts/    - raw JS files
+        styles/     - uncompiled sass
 
-assets-dev/         - SASS, JS, and raw images
-    scripts/        - all javascript
-    styles/         - all SASS, CSS and other styles
-    images/         - raw images and sprites
+    lib/            - all functions for the theme
+    templates/      - extra snippets included in the theme
 
-lib/                - all of the php functions for the theme
-templates/          - more php snipptets & templates
+build/              - for building the theme, use this folder for testing
+                    - all files from src are compiled/ moved to here
+    assets/         - compiled/ optimized assets
+    ..
+
+dist/
+    theme/          - the final production ready theme is built here
+                    - all files from src are compiled/ moved to here
+        assets/     - compiled/ optimized assets, no sourcemaps
+        ..
 ```
+
+## Credits
+
+I was inspired by the following
+
+* [Roots Starter Theme](https://github.com/roots/roots)
+* [WordPress Gulp Sass Starter Kit](https://github.com/synapticism/wordpress-gulp-bower-sass)
+* [Bones](https://github.com/eddiemachado/bones)
+
+## License
+
+Copyright 2014 [Ross Dallaire](http://rdallaire.com). Licensed under the GPLv3: http://www.gnu.org/licenses/gpl.txt
