@@ -27,13 +27,12 @@ npm install gulp -g
 npm install bower -g
 ```
 
+Install node modules and bower components. (This will run bower install)
 ```bash
 npm install
 ```
 
 Install [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) for Chrome
-
-This will install all node modules and bower components.
 
 
 ## Gulp Commands
@@ -42,33 +41,16 @@ This will install all node modules and bower components.
 * `gulp watch` - watch for file changes, build the assets, run livereload
 * `gulp dist` - compile all/ move all files ready for production
 
-
-## File Structure
+## Organization
 Brief overview of the folders used in Bonsai. Gulp is used to generate the `build` and `dist` folders where the compiled & optimized files live.
 
-```
-src/                - where all the raw files are edited/ placed
-    assets/
-        images/     - raw image files
-        scripts/    - raw JS files
-        styles/     - uncompiled sass
+* `src/`: Edit files here. All raw sass, images, php files are here.
+* `build/`: Used for development of the theme. SASS is compiled here. Images are compressed and placed here. `gulp` and `gulp watch` will create the buld folder.
+* `dist/`: The distribution version of the theme lives. `gulp dist` creates the distribution.
+* `dist/theme`: This is the final code files with no source maps, all assets are optimized.
 
-    lib/            - all functions for the theme
-    templates/      - extra snippets included in the theme
 
-build/              - for building the theme, use this folder for testing
-                    - all files from src are compiled/ moved to here
-    assets/         - compiled/ optimized assets
-    ..
-
-dist/
-    theme/          - the final production ready theme is built here
-                    - all files from src are compiled/ moved to here
-        assets/     - compiled/ optimized assets, no sourcemaps
-        ..
-```
-
-## Credits
+### Credits
 
 I was inspired by the following
 
@@ -76,6 +58,6 @@ I was inspired by the following
 * [WordPress Gulp Sass Starter Kit](https://github.com/synapticism/wordpress-gulp-bower-sass)
 * [Bones](https://github.com/eddiemachado/bones)
 
-## License
+### License
 
 Copyright 2014 [Ross Dallaire](http://rdallaire.com). Licensed under the GPLv3: http://www.gnu.org/licenses/gpl.txt
