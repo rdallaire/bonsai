@@ -20,9 +20,9 @@ styles = {
 
 scripts = {
 
-	src: 	'coming soon',
-	build: 	'coming soon',
-	dist: 	'coming soon'
+	src: 	'./src/assets/scripts/**/*',
+	build: 	'./build/assets/scripts/',
+	dist: 	'./dist/' + theme.name + '/assets/scripts/'
 
 },
 
@@ -40,10 +40,13 @@ gulp.task('styles', function() {
 	gulp.src(styles.src)						// grab main sass file
 		.pipe(plugins.sourcemaps.init())		// start sourcemaps
 		.pipe(plugins.sass())					// run sass compile
+		.pipe(plugins.autoprefixer({			// auto-prefix css
+			browsers: ['last 2 versions', 'ie 8', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
+		}))
 		.pipe(plugins.minifyCss())				// minify css
 		.pipe(plugins.sourcemaps.write('.'))	// write sourcemaps to new file
 		.pipe(gulp.dest(styles.build))			// output css and sourcemaps
-		.pipe(plugins.rename({suffix: '.min'})) // rename file to main.min.css
+		.pipe(plugins.rename({suffix: '.min'}));// rename file to main.min.css
 
 });
 
@@ -62,6 +65,13 @@ gulp.task('styles-dist', function() {
 
 // build scripts
 gulp.task('scripts', function() {
+
+	// gulp.src(scripts.src)
+		// .pipe(plugins.sourcemaps.init)
+		// .pipe(plugins.uglify)
+		// .pipe(plugins.sourcemaps.write, '.')
+		// .pipe(gulp.dest(scripts.build))
+		// .pipe(plugins.rename({suffix: '.min'}));
 
 });
 
@@ -109,6 +119,20 @@ gulp.task('clean', function() {
 
 // watch for file changes
 gulp.task('watch', function() {
+
+	// plugins.livereload.listen();
+
+	// watch for sass style changes and run styles
+	gulp.watch('src/assets/styles/**/*.scss', ['styles']);
+
+	// watch for php file changes and run move
+	gulp.watch(['src/**/*.php', 'src/style.css'], ['move']);
+
+	// watch for js file changes and run scripts
+	gulp.watch('src/assets/scripts/**/*.js', ['scripts']);
+
+	// watch for changes to the images and run images
+	gulp.watch('src/assets/images/**/*', ['images']);
 
 });
 
