@@ -60,4 +60,4 @@ I was inspired by the following
 
 ### License
 
-Copyright 2014 [Ross Dallaire](http://rdallaire.com). Licensed under the GPLv3: http://www.gnu.org/licenses/gpl.txt
+Copyright 2014 [Ross Dallaire](http://rdallaire.com). GNU General Public License v2 or later http://www.gnu.org/licenses/gpl-2.0.html

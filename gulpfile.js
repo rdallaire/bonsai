@@ -1,33 +1,32 @@
 var gulp 			= require('gulp');
 var del 			= require('del');
 
-
 // loads gulp- plugins from package.json
 var plugins 		= require('gulp-load-plugins')({ camelize: true });
 
-var theme = {
+theme = {
 
 	name: 'theme'
 
-};
+},
 
-var styles = {
+styles = {
 
 	src: 	'./src/assets/styles/main.scss',
 	build: 	'./build/assets/styles/',
 	dist: 	'./dist/' + theme.name + '/assets/styles/'
 
-};
+},
 
-var scripts = {
+scripts = {
 
 	src: 	'coming soon',
 	build: 	'coming soon',
 	dist: 	'coming soon'
 
-};
+},
 
-var images = {
+images = {
 
 	src: 	'./src/assets/images/',
 	build: 	'./build/assets/images/',
