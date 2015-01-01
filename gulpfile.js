@@ -88,7 +88,11 @@ gulp.task('scripts-dist', function() {
 // build images
 gulp.task('images', function() {
 
-	gulp.src(images.src+'**/*(*.png|*.jpg|*.jpeg|*.gif)')
+	gulp.src(images.src+'**/*')
+		.pipe(plugins.imagemin({
+			optimizationLevel: 3,
+			progressive: true,
+			interlaced: true }))
 		.pipe(gulp.dest(images.build));
 
 });
@@ -96,7 +100,11 @@ gulp.task('images', function() {
 // dist images
 gulp.task('images-dist', function() {
 
-	gulp.src(images.src+'**/*(*.png|*.jpg|*.jpeg|*.gif)')
+	gulp.src(images.src+'**/*')
+		.pipe(plugins.imagemin({
+			optimizationLevel: 3,
+			progressive: true,
+			interlaced: true }))
 		.pipe(gulp.dest(images.dist));
 
 });

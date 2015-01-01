@@ -51,7 +51,7 @@ Brief overview of the folders used in Bonsai. Gulp is used to generate the `buil
 
 ### Todo
 
-* finish gulpfile (image compression/ js minify/ concat)
+* finish gulpfile (js minify/ concat)
 * add favicons codes
 * add woocommerce templates
 * add screenshot.png
