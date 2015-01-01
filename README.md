@@ -1,6 +1,5 @@
 Bonsai
 ======
-_(Work in Progress)_
 
 WordPress starter theme using Gulp, Foundation & SASS.
 
@@ -46,6 +45,11 @@ Brief overview of the folders used in Bonsai. Gulp is used to generate the `buil
 
 * `src/`: Edit files here. All raw sass, images, php files are here.
 * `build/`: Used for development of the theme. SASS is compiled here. Images are compressed and placed here. `gulp` and `gulp watch` will create the buld folder.
+    * Symlink the build folder to your wp-content/themes folder for development.
+    * __Example symlink on Windows__
+    ```
+    mklink /D c:\xampp\htdocs\wordpress\wp-content\themes\my-theme c:\dev\projects\bonsai\build\
+    ``
 * `dist/`: The distribution version of the theme lives. `gulp dist` creates the distribution.
 * `dist/theme`: This is the final code files with no source maps, all assets are optimized.
 
