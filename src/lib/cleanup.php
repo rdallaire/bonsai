@@ -6,7 +6,7 @@ function filter_ptags_on_images($content){
    return preg_replace( '/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content );
 }
 
-function bonasi_clean_head() {
+// function bonasi_clean_head() {
 
 	remove_action('wp_head', 'feed_links_extra', 3);
 	remove_action('wp_head', 'feed_links', 2);
@@ -19,7 +19,7 @@ function bonasi_clean_head() {
 	remove_filter('wp_head', 'wp_widget_recent_comments_style');
 	remove_action('wp_head', 'wp_generator');
 
-}
+// }
 
 add_filter( 'the_content', 'filter_ptags_on_images' );
 

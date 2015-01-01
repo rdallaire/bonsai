@@ -23,7 +23,7 @@ function bonsai_disable_default_dashboard_widgets() {
 
 // add custom CSS to login page
 function bonsai_login_css() {
-	// wp_enqueue_style( 'bonsai_login_css', get_template_directory_uri() . '/library/css/login.css', false );
+	// wp_enqueue_style( 'bonsai_login_css', get_template_directory_uri() . '/assets/styles/login.css', false );
 }
 
 // custom admin footer
