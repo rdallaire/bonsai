@@ -49,6 +49,17 @@ Brief overview of the folders used in Bonsai. Gulp is used to generate the `buil
 * `dist/`: The distribution version of the theme lives. `gulp dist` creates the distribution.
 * `dist/theme`: This is the final code files with no source maps, all assets are optimized.
 
+### Todo
+
+* finish gulpfile (image compression/ js minify/ concat)
+* add favicons codes
+* add woocommerce templates
+* add screenshot.png
+* pass wordpress theme test
+* make sure themeforest rules are accounted for [themeforest](https://help.market.envato.com/hc/en-us/articles/202822450-WordPress-Theme-Submission-Requirements)
+* add comments.php template
+* setup js and wp_enque for js. Also setup way to grab vendor js and minify
+
 
 ### Credits
 
