@@ -53,10 +53,15 @@ gulp.task('styles', function() {
 gulp.task('styles-dist', function() {
 
 	gulp.src(styles.src)
+		.pipe(plugins.sourcemaps.init())
 		.pipe(plugins.sass())
+		.pipe(plugins.autoprefixer({
+			browsers: ['last 2 versions', 'ie 8', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
+		}))
 		.pipe(plugins.minifyCss())
+		.pipe(plugins.sourcemaps.write('.'))
 		.pipe(gulp.dest(styles.dist))
-		.pipe(plugins.rename({suffix: '.min'}))
+		.pipe(plugins.rename({suffix: '.min'}));
 
 });
 
