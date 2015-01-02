@@ -45,15 +45,17 @@ Install [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihaj
 Brief overview of the folders used in Bonsai. Gulp is used to generate the `build` and `dist` folders where the compiled & optimized files live.
 
 * `src/`: Edit files here. All raw sass, images, php files are here.
-* `build/`: Used for development of the theme. SASS is compiled here. Images are compressed and placed here. `gulp` and `gulp watch` will create the buld folder.
-    * Symlink the build folder to your wp-content/themes folder for development. Windows example below.
-    * `mklink /D c:\xampp\htdocs\wordpress\wp-content\themes\my-theme c:\dev\projects\bonsai\build\`
+* `build/`: Used for development of the theme. SASS is compiled here. Images are compressed and placed here. `gulp` and `gulp watch` will create the buld folder. You can symlink your `build/` folder to your `themes` folder. (example below)
 * `dist/`: The distribution version of the theme lives. `gulp dist` creates the distribution.
 * `dist/theme`: This is the final code files with no source maps, all assets are optimized.
 
+Symlink in windows example
+```
+mklink /D c:\xampp\htdocs\wordpress\wp-content\themes\my-theme c:\dev\projects\bonsai\build\
+```
+
 ### Todo
 
-* finish gulpfile (js minify/ concat)
 * add favicons codes
 * add woocommerce templates
 * add screenshot.png
@@ -61,15 +63,7 @@ Brief overview of the folders used in Bonsai. Gulp is used to generate the `buil
 * make sure themeforest rules are accounted for [themeforest](https://help.market.envato.com/hc/en-us/articles/202822450-WordPress-Theme-Submission-Requirements)
 * add comments.php template
 * setup js and wp_enque for js. Also setup way to grab vendor js and minify
-
-
-### Credits
-
-I was inspired by the following
-
-* [Roots Starter Theme](https://github.com/roots/roots)
-* [WordPress Gulp Sass Starter Kit](https://github.com/synapticism/wordpress-gulp-bower-sass)
-* [Bones](https://github.com/eddiemachado/bones)
+* setup sourcemaps for JS
 
 ### License
 
