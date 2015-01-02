@@ -65,6 +65,11 @@ mklink /D c:\xampp\htdocs\wordpress\wp-content\themes\my-theme c:\dev\projects\b
 * setup js and wp_enque for js. Also setup way to grab vendor js and minify
 * setup sourcemaps for JS
 
+### Changelog
+
+0.0.2 Gulpfile setup with basic commands
+0.0.1 Initial structure setup
+
 ### License
 
 Copyright 2014 [Ross Dallaire](http://rdallaire.com). GNU General Public License v2 or later http://www.gnu.org/licenses/gpl-2.0.html
