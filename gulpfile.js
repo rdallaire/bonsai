@@ -65,11 +65,11 @@ gulp.task('styles-dist', function() {
 gulp.task('scripts', function() {
 
 	gulp.src(scripts.src)
-		.pipe(plugins.sourcemaps.init)
-		.pipe(plugins.uglify)
-		.pipe(plugins.sourcemaps.write, '.')
-		.pipe(gulp.dest(scripts.build))
-		.pipe(plugins.rename({suffix: '.min'}));
+		// .pipe(plugins.sourcemaps.init())
+		.pipe(plugins.uglify())
+		// .pipe(plugins.sourcemaps.write, '.')
+		.pipe(plugins.concat('main.min.js'))
+		.pipe(gulp.dest(scripts.build));
 
 });
 
@@ -77,11 +77,11 @@ gulp.task('scripts', function() {
 gulp.task('scripts-dist', function() {
 
 	gulp.src(scripts.src)
-		.pipe(plugins.sourcemaps.init)
-		.pipe(plugins.uglify)
-		.pipe(plugins.sourcemaps.write, '.')
-		.pipe(gulp.dest(scripts.dist))
-		.pipe(plugins.rename({suffix: '.min'}));
+		// .pipe(plugins.sourcemaps.init())
+		.pipe(plugins.uglify())
+		// .pipe(plugins.sourcemaps.write, '.')
+		.pipe(plugins.concat('main.min.js'))
+		.pipe(gulp.dest(scripts.dist));
 
 });
 
@@ -125,10 +125,19 @@ gulp.task('move-dist', function() {
 
 });
 
-// clean the dist and build directories
+// clean the build
 gulp.task('clean', function() {
 
-	del(['build/', 'dist/'], function (err, deletedFiles) {
+	del(['build/'], function (err, deletedFiles) {
+		console.log('Folders deleted:', deletedFiles.join(', '));
+	});
+
+});
+
+// clean the dist
+gulp.task('clean-dist', function() {
+
+	del(['dist/'], function (err, deletedFiles) {
 		console.log('Folders deleted:', deletedFiles.join(', '));
 	});
 
@@ -147,5 +156,5 @@ gulp.task('watch', function() {
 
 // main tasks that put everything together
 gulp.task('default', ['build']);
-gulp.task('build', ['clean', 'styles', 'scripts', 'images', 'move']);
-gulp.task('dist', ['clean', 'styles-dist', 'scripts-dist', 'images-dist', 'move-dist']);
+gulp.task('build', ['styles', 'scripts', 'images', 'move']);
+gulp.task('dist', ['styles-dist', 'scripts-dist', 'images-dist', 'move-dist']);
