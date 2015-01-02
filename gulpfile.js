@@ -4,7 +4,7 @@ var plugins         = require('gulp-load-plugins')({ camelize: true });
 
 theme = {
 
-	name: 'theme'
+	name: 'themeTextDomain'
 
 },
 

@@ -34,7 +34,6 @@ npm install
 
 Install [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) for Chrome
 
-
 ## Gulp Commands
 
 * `gulp` - build the project once
@@ -54,7 +53,20 @@ Symlink in windows example
 mklink /D c:\xampp\htdocs\wordpress\wp-content\themes\my-theme c:\dev\projects\bonsai\build\
 ```
 
-### Todo
+## Setup
+
+(WIP)
+The following names are used throughout the theme for easy search/ replace and automation with [yo-bonsai](https://github.com/rdallaire/yo-bonsai)
+
+`themeName` > `Theme Name`
+
+`themeHandle` > `Theme_Name`
+
+`themeFunction` > `theme_name`
+
+`themeTextDomain` > `theme-name`
+
+## Todo
 
 * add favicons codes
 * add woocommerce templates
@@ -64,8 +76,9 @@ mklink /D c:\xampp\htdocs\wordpress\wp-content\themes\my-theme c:\dev\projects\b
 * add comments.php template
 * setup js and wp_enque for js. Also setup way to grab vendor js and minify
 * setup sourcemaps for JS
+* add humans.txt
 
-### Changelog
+## Changelog
 
 0.0.2 Gulpfile setup with basic commands
 0.0.1 Initial structure setup
