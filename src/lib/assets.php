@@ -1,6 +1,6 @@
 <?php
 
-function bonsai_assets() {
+function themeFunction_assets() {
 
 	// styles
 	wp_enqueue_style( 'main-css' , get_template_directory_uri() . '/assets/styles/main.css', false, null);
@@ -10,6 +10,6 @@ function bonsai_assets() {
 	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/scripts/main.min.js', array('jquery'), null, true );
 
 }
-add_action('wp_enqueue_scripts', 'bonsai_assets');
+add_action('wp_enqueue_scripts', 'themeFunction_assets');
 
 ?>

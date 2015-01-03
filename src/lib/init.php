@@ -1,9 +1,9 @@
 <?php
 
-function bonsai_init() {
+function themeFunction_init() {
 
 	// for language translation
-	load_theme_textdomain( 'bonsaitheme' );
+	load_theme_textdomain( 'themeTextDomain' );
 
 	// maximum allowed width of content
 	if ( ! isset( $content_width ) ) {
@@ -11,12 +11,12 @@ function bonsai_init() {
 	}
 
 	// create sidebars from sidebars.php
-	add_action( 'widgets_init', 'bonsai_sidebars' );
+	add_action( 'widgets_init', 'themeFunction_sidebars' );
 
 	// Register wp_nav_menu() menus
 	// http://codex.wordpress.org/Function_Reference/register_nav_menus
 	register_nav_menus( array(
-		'primary_navigation' => __('Primary Navigation', 'bonsaitheme' )
+		'primary_navigation' => __('Primary Navigation', 'themeTextDomain' )
 	));
 
 	// add post thumbnails
@@ -45,8 +45,6 @@ function bonsai_init() {
 	add_theme_support( 'woocommerce' );
 
 }
-
-// run bonsai init
-add_action( 'after_setup_theme', 'bonsai_init' );
+add_action( 'after_setup_theme', 'themeFunction_init' );
 
  ?>

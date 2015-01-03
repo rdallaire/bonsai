@@ -32,20 +32,20 @@
 
 			<p class="footer-comment-count">
 				<?php comments_number(
-					__( '<span>No</span> Comments', 'bonsaitheme' ),
-					__( '<span>One</span> Comment', 'bonsaitheme' ),
-					__( '<span>%</span> Comments', 'bonsaitheme' ) );
+					__( '<span>No</span> Comments', 'themeTextDomain' ),
+					__( '<span>One</span> Comment', 'themeTextDomain' ),
+					__( '<span>%</span> Comments', 'themeTextDomain' ) );
 				?>
 			</p>
 
 
 			<?php printf( '<p class="footer-category">' .
-							__('filed under', 'bonsaitheme' ) .
+							__('filed under', 'themeTextDomain' ) .
 							': %1$s</p>' , get_the_category_list(', ') );
 			?>
 
 			<?php the_tags( '<p class="footer-tags tags"><span class="tags-title">' .
-			__( 'Tags:', 'bonsaitheme' ) .
+			__( 'Tags:', 'themeTextDomain' ) .
 			'</span> ', ', ', '</p>' );
 			?>
 
@@ -56,7 +56,7 @@
 
 	<?php endwhile; ?>
 
-		<?php bonsai_page_navi(); ?>
+		<?php themeFunction_page_navi(); ?>
 
 	<?php else : ?>
 

@@ -10,7 +10,7 @@
 		<div class="no-widgets">
 
 			<p>
-				<?php _e( 'This is a widget ready area. Add some and they will appear here.', 'bonsaitheme' );  ?>
+				<?php _e( 'This is a widget ready area. Add some and they will appear here.', 'themeTextDomain' );  ?>
 			</p>
 		</div>
 

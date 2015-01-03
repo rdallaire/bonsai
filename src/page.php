@@ -28,7 +28,7 @@
 
 	<?php endwhile; ?>
 
-		<?php bonsai_page_navi(); ?>
+		<?php themeFunction_page_navi(); ?>
 
 	<?php else : ?>
 
