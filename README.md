@@ -65,19 +65,6 @@ The following names are used throughout the theme for easy search/ replace and a
 
 `themeTextDomain` > `theme-name`
 
-## Todo
-
-* add favicons codes
-* add woocommerce templates
-* add screenshot.png
-* pass wordpress theme test
-* make sure themeforest rules are accounted for [themeforest](https://help.market.envato.com/hc/en-us/articles/202822450-WordPress-Theme-Submission-Requirements)
-* add comments.php template
-* setup js and wp_enque for js. Also setup way to grab vendor js and minify
-* setup sourcemaps for JS
-* add humans.txt
-* [add docblock headers to all files](https://make.wordpress.org/core/handbook/inline-documentation-standards/php-documentation-standards/#6-file-headers)
-
 ### License
 
 Copyright 2014 [Ross Dallaire](http://rdallaire.com). GNU General Public License v2 or later http://www.gnu.org/licenses/gpl-2.0.html
