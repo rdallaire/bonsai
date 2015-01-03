@@ -55,7 +55,6 @@ mklink /D c:\xampp\htdocs\wordpress\wp-content\themes\my-theme c:\dev\projects\b
 
 ## Setup
 
-(WIP)
 The following names are used throughout the theme for easy search/ replace and automation with [yo-bonsai](https://github.com/rdallaire/yo-bonsai)
 
 `themeName` > `Theme Name`
@@ -77,11 +76,7 @@ The following names are used throughout the theme for easy search/ replace and a
 * setup js and wp_enque for js. Also setup way to grab vendor js and minify
 * setup sourcemaps for JS
 * add humans.txt
-
-## Changelog
-
-0.0.2 Gulpfile setup with basic commands
-0.0.1 Initial structure setup
+* [add docblock headers to all files](https://make.wordpress.org/core/handbook/inline-documentation-standards/php-documentation-standards/#6-file-headers)
 
 ### License
 
