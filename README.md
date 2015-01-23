@@ -22,17 +22,15 @@ WordPress starter theme using Gulp, Foundation & SASS.
 ## Installation
 
 Install gulp and bower globally if not already installed.
-```bash
+```
 npm install gulp -g
 npm install bower -g
 ```
 
 Install node modules and bower components. (This will run bower install)
-```bash
+```
 npm install
 ```
-
-Install [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) for Chrome
 
 ## Gulp Commands
 
