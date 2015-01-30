@@ -75,6 +75,7 @@ The following names are used throughout the theme for easy search/ replace and a
 * setup js and wp_enque for js. Also setup way to grab vendor js and minify
 * setup sourcemaps for JS
 * add humans.txt
+* add an easier way to add more bower components (slick carousel for example)
 
 ## Changelog
 
