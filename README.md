@@ -64,18 +64,10 @@ The following names are used throughout the theme for easy search/ replace and a
 
 `themeTextDomain` > `theme-name`
 
-## Todo
+## Future Improvements
 
-* add favicons codes
-* add woocommerce templates
-* add screenshot.png
-* pass wordpress theme test
-* make sure themeforest rules are accounted for [themeforest](https://help.market.envato.com/hc/en-us/articles/202822450-WordPress-Theme-Submission-Requirements)
-* add comments.php template
-* setup js and wp_enque for js. Also setup way to grab vendor js and minify
-* setup sourcemaps for JS
-* add humans.txt
-* add an easier way to add more bower components (slick carousel for example)
+* Checkout out the [Todos](https://github.com/rdallaire/bonsai/blob/master/todo.md) to see what I plan on improving and adding to Bonsai.
+
 
 ## Changelog
 
