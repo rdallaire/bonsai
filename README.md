@@ -14,6 +14,7 @@ WordPress starter theme using Gulp, Foundation & SASS.
 * [Gulp](http://gulpjs.com/) for compiling SASS to CSS, live reloading, concatenating and minifying files
 * [Bower](http://bower.io/) for front-end package management
 * [Foundation 5](http://foundation.zurb.com/)
+* [BrowserSync](http://www.browsersync.io/) for live reloading and actions
 * Uses [WordPress Coding Standards](https://make.wordpress.org/core/handbook/coding-standards/)
 * ARIA roles and microformats
 * [WooCommerce ready (coming soon)](http://www.woothemes.com/woocommerce/)
