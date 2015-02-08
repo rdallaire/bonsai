@@ -3,6 +3,8 @@ Bonsai
 
 WordPress starter theme using Gulp, Foundation & SASS.
 
+Checkout [yo-bonsai](https://github.com/rdallaire/yo-bonsai), a yeoman generator for bonsai that will automate the theme even more!
+
 ## Goals
 
 * Quickly develop WordPress themes that can be used by anyone.
