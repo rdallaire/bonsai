@@ -1,7 +1,7 @@
 <?php
 
 // disable default dashboard widgets
-function bonsai_disable_default_dashboard_widgets() {
+function themeFunction_disable_default_dashboard_widgets() {
 
 	global $wp_meta_boxes;
 	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);       // Right Now Widget
@@ -22,17 +22,17 @@ function bonsai_disable_default_dashboard_widgets() {
 }
 
 // add custom CSS to login page
-function bonsai_login_css() {
-	// wp_enqueue_style( 'bonsai_login_css', get_template_directory_uri() . '/assets/styles/login.css', false );
+function themeFunction_login_css() {
+	// wp_enqueue_style( 'themeFunction_login_css', get_template_directory_uri() . '/assets/styles/login.css', false );
 }
 
 // custom admin footer
-function bonsai_custom_admin_footer() {
-	_e( '<span id="footer-thankyou">Theme developed by <a href="http://rdallaire.com" target="_blank">Ross Dallaire</a></span>.', 'bonsaitheme' );
+function themeFunction_custom_admin_footer() {
+	_e( '<span id="footer-thankyou">Theme developed by <a href="themeAuthorURI" target="_blank">themeAuthor</a></span>.', 'themeTextDomain' );
 }
 
-add_action( 'wp_dashboard_setup', 'bonsai_disable_default_dashboard_widgets' );
-add_action( 'login_enqueue_scripts', 'bonsai_login_css', 10 );
-add_filter( 'admin_footer_text', 'bonsai_custom_admin_footer' );
+add_action( 'wp_dashboard_setup', 'themeFunction_disable_default_dashboard_widgets' );
+add_action( 'login_enqueue_scripts', 'themeFunction_login_css', 10 );
+add_filter( 'admin_footer_text', 'themeFunction_custom_admin_footer' );
 
  ?>

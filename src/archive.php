@@ -4,12 +4,12 @@
 
 	<?php if (is_category()) { ?>
 		<h1 class="archive-title h2">
-			<span><?php _e( 'Posts Categorized:', 'bonsaitheme' ); ?></span> <?php single_cat_title(); ?>
+			<span><?php _e( 'Posts Categorized:', 'themeTextDomain' ); ?></span> <?php single_cat_title(); ?>
 		</h1>
 
 	<?php } elseif (is_tag()) { ?>
 		<h1 class="archive-title h2">
-			<span><?php _e( 'Posts Tagged:', 'bonsaitheme' ); ?></span> <?php single_tag_title(); ?>
+			<span><?php _e( 'Posts Tagged:', 'themeTextDomain' ); ?></span> <?php single_tag_title(); ?>
 		</h1>
 
 	<?php } elseif (is_author()) {
@@ -18,22 +18,22 @@
 	?>
 		<h1 class="archive-title h2">
 
-			<span><?php _e( 'Posts By:', 'bonsaitheme' ); ?></span> <?php the_author_meta('display_name', $author_id); ?>
+			<span><?php _e( 'Posts By:', 'themeTextDomain' ); ?></span> <?php the_author_meta('display_name', $author_id); ?>
 
 		</h1>
 	<?php } elseif (is_day()) { ?>
 		<h1 class="archive-title h2">
-			<span><?php _e( 'Daily Archives:', 'bonsaitheme' ); ?></span> <?php the_time('l, F j, Y'); ?>
+			<span><?php _e( 'Daily Archives:', 'themeTextDomain' ); ?></span> <?php the_time('l, F j, Y'); ?>
 		</h1>
 
 	<?php } elseif (is_month()) { ?>
 			<h1 class="archive-title h2">
-				<span><?php _e( 'Monthly Archives:', 'bonsaitheme' ); ?></span> <?php the_time('F Y'); ?>
+				<span><?php _e( 'Monthly Archives:', 'themeTextDomain' ); ?></span> <?php the_time('F Y'); ?>
 			</h1>
 
 	<?php } elseif (is_year()) { ?>
 			<h1 class="archive-title h2">
-				<span><?php _e( 'Yearly Archives:', 'bonsaitheme' ); ?></span> <?php the_time('Y'); ?>
+				<span><?php _e( 'Yearly Archives:', 'themeTextDomain' ); ?></span> <?php the_time('Y'); ?>
 			</h1>
 	<?php } ?>
 
@@ -47,7 +47,7 @@
 				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 			</h3>
 			<p>
-				<?php printf( __( 'Posted %1$s by %2$s', 'bonsaitheme' ),
+				<?php printf( __( 'Posted %1$s by %2$s', 'themeTextDomain' ),
 						     /* the time the post was published */
 						     '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
 								/* the author of the post */
@@ -59,7 +59,7 @@
 
 		<section class="entry-content">
 
-			<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+			<?php the_post_thumbnail(); ?>
 
 			<?php the_excerpt(); ?>
 
@@ -73,7 +73,7 @@
 
 	<?php endwhile; ?>
 
-		<?php bonsai_page_navi(); ?>
+		<?php themeFunction_page_navi(); ?>
 
 	<?php else : ?>
 

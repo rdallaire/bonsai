@@ -24,7 +24,7 @@
 */
 
 	// files to load into functions.php
-	$bonsai_includes = array(
+	$themeFunction_includes = array(
 
 		'lib/init.php',				// initial theme setup
 		'lib/cleanup.php',			// initial theme setup
@@ -36,12 +36,12 @@
 	);
 
 	// go through each file and require it
-	foreach ( $bonsai_includes as $file ) {
+	foreach ( $themeFunction_includes as $file ) {
 
 		// file not found, output an error
 		if (!$filepath = locate_template($file)) {
 
-			trigger_error(sprintf(__('Error locating %s for inclusion', 'bonsai'), $file), E_USER_ERROR);
+			trigger_error(sprintf(__('Error locating %s for inclusion', 'themeTextDomain'), $file), E_USER_ERROR);
 		}
 
 		// include the file

@@ -2,7 +2,7 @@
 
 <main id="main" role="main">
 
-	<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonsaitheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+	<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'themeTextDomain' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -24,7 +24,7 @@
 
 			<section class="entry-content">
 
-				<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'bonsaitheme' ) . '</span>' ); ?>
+				<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'themeTextDomain' ) . '</span>' ); ?>
 
 			</section>
 
@@ -36,7 +36,7 @@
 
 	<?php endwhile; ?>
 
-		<?php bonsai_page_navi(); ?>
+		<?php themeFunction_page_navi(); ?>
 
 	<?php else : ?>
 
