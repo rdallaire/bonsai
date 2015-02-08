@@ -67,6 +67,7 @@ The following names are used throughout the theme for easy search/ replace and a
 
 ## Changelog
 
+0.0.3 Add BrowserSync
 0.0.2 Gulpfile setup with basic commands
 0.0.1 Initial structure setup
 
