@@ -70,7 +70,6 @@ The following names are used throughout the theme for easy search/ replace and a
 0.0.2 Gulpfile setup with basic commands
 0.0.1 Initial structure setup
 
->>>>>>> ad3a7246a0cc86b316771735ebfc9d160f9e5fd4
 ### License
 
 Copyright 2014 [Ross Dallaire](http://rdallaire.com). GNU General Public License v2 or later http://www.gnu.org/licenses/gpl-2.0.html
