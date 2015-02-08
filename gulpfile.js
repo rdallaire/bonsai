@@ -1,6 +1,8 @@
 var gulp            = require('gulp');
 var del             = require('del');
 var plugins         = require('gulp-load-plugins')({ camelize: true });
+var browserSync 	= require('browser-sync');
+var reload      	= browserSync.reload;
 
 theme = {
 
@@ -31,6 +33,10 @@ images = {
 	dist:   './dist/' + theme.name + 'assets/images/'
 
 };
+
+// set url for browser-sync
+// set your own if you dont want to use 'localhost/themeTextDomain'
+var bsProxy = 'localhost/' + theme.name;
 
 // build styles
 gulp.task('styles', function() {
@@ -148,18 +154,34 @@ gulp.task('clean-dist', function() {
 
 });
 
+// setup browser-sync
+gulp.task('browser-sync', function() {
+
+    browserSync({
+        proxy: "localhost/ssj/"
+    });
+
+});
+
+// reload browser-sync
+gulp.task('bs-reload', function () {
+
+    browserSync.reload();
+
+});
+
 // watch for file changes
-gulp.task('watch', function() {
+gulp.task('watch', ['browser-sync'], function() {
 
 	// plugins.livereload.listen();
-	gulp.watch('src/assets/styles/**/*.scss', ['styles']);
-	gulp.watch(['src/**/*.php', 'src/style.css'], ['move']);
-	gulp.watch('src/assets/scripts/**/*.js', ['scripts']);
-	gulp.watch('src/assets/images/**/*', ['images']);
+	gulp.watch('src/assets/styles/**/*.scss', ['styles', 'bs-reload']);
+	gulp.watch(['src/**/*.php', 'src/style.css'], ['move', 'bs-reload']);
+	gulp.watch('src/assets/scripts/**/*.js', ['scripts', 'bs-reload']);
+	gulp.watch('src/assets/images/**/*', ['images', 'bs-reload']);
 
 });
 
 // main tasks that put everything together
-gulp.task('default', ['build']);
+gulp.task('default', ['build', 'browser-sync']);
 gulp.task('build', ['styles', 'scripts', 'images', 'move']);
-gulp.task('dist', ['styles-dist', 'scripts-dist', 'images-dist', 'move-dist']);
+gulp.task('dist', ['styles-dist', 'scripts-dist', 'images-dist', 'move-dist']);t']);
