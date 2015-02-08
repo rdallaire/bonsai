@@ -56,7 +56,8 @@ mklink /D c:\xampp\htdocs\wordpress\wp-content\themes\my-theme c:\dev\projects\b
 
 ## Setup
 
-The following names are used throughout the theme for easy search/ replace and automation with [yo-bonsai](https://github.com/rdallaire/yo-bonsai)
+The following names are used throughout the theme for easy search/ replace.
+You can also use [yo-bonsai](https://github.com/rdallaire/yo-bonsai) to auto genrate these.
 
 `themeName` > `Theme Name`
 
