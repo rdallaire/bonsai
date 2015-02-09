@@ -173,7 +173,6 @@ gulp.task('bs-reload', function () {
 // watch for file changes
 gulp.task('watch', ['browser-sync'], function() {
 
-	// plugins.livereload.listen();
 	gulp.watch('src/assets/styles/**/*.scss', ['styles', 'bs-reload']);
 	gulp.watch(['src/**/*.php', 'src/style.css'], ['move', 'bs-reload']);
 	gulp.watch('src/assets/scripts/**/*.js', ['scripts', 'bs-reload']);
