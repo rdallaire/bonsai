@@ -42,6 +42,7 @@ var bsProxy = 'localhost/' + theme.name;
 gulp.task('styles', function() {
 
 	gulp.src(styles.src)
+		.pipe(plugins.plumber())
 		.pipe(plugins.sourcemaps.init())
 		.pipe(plugins.sass())
 		.pipe(plugins.autoprefixer({
