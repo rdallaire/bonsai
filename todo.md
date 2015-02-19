@@ -1,4 +1,4 @@
-## Todo
+# Todo
 
 * add favicons codes
 * add woocommerce templates
@@ -11,3 +11,4 @@
 * add humans.txt
 * add an easier way to add more bower components (slick carousel for example)
 * Setup some sort of assets manifest to include bower components, IE I want to add in fastclick or slick carousel without having to copy/paste files
+* Add FTP or deployment method

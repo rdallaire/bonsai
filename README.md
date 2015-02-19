@@ -68,14 +68,6 @@ You can also use [yo-bonsai](https://github.com/rdallaire/yo-bonsai) to auto gen
 
 `themeTextDomain` > `theme-name`
 
-
-## Changelog
-
-* 0.0.4 Add utils SCSS
-* 0.0.3 Add BrowserSync
-* 0.0.2 Gulpfile setup with basic commands
-* 0.0.1 Initial structure setup
-
 ### License
 
 Copyright 2014 [Ross Dallaire](http://rdallaire.com). GNU General Public License v2 or later http://www.gnu.org/licenses/gpl-2.0.html
