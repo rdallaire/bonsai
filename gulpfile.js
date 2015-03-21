@@ -125,6 +125,7 @@ gulp.task('images-dist', function() {
 gulp.task('move', function() {
 
 	gulp.src(['src/**/*.php', 'src/style.css'])
+		.pipe(plugins.changed('build/'))
 		.pipe(gulp.dest('build/'));
 
 });
@@ -184,4 +185,4 @@ gulp.task('watch', ['browser-sync'], function() {
 // main tasks that put everything together
 gulp.task('default', ['build', 'browser-sync']);
 gulp.task('build', ['styles', 'scripts', 'images', 'move']);
-gulp.task('dist', ['styles-dist', 'scripts-dist', 'images-dist', 'move-dist']);t']);
+gulp.task('dist', ['styles-dist', 'scripts-dist', 'images-dist', 'move-dist']);
