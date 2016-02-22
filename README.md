@@ -70,4 +70,4 @@ You can also use [yo-bonsai](https://github.com/rdallaire/yo-bonsai) to auto gen
 
 ### License
 
-Copyright 2014 [Ross Dallaire](http://rdallaire.com). GNU General Public License v2 or later http://www.gnu.org/licenses/gpl-2.0.html
+Copyright 2015 [Ross Dallaire](http://rdallaire.com). GNU General Public License v2 or later http://www.gnu.org/licenses/gpl-2.0.html
